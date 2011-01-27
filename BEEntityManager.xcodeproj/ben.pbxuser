@@ -1,0 +1,210 @@
+// !$*UTF8*$!
+{
+	1D3623250D0F684500981E51 /* BEEntityManagerAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1652, 2951}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 385}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* BEEntityManager */ = {
+		activeExec = 0;
+		executables = (
+			B5DC573912F14BED00424BBF /* BEEntityManager */,
+		);
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = B5DC573912F14BED00424BBF /* BEEntityManager */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* BEEntityManager */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* BEEntityManager */,
+		);
+		codeSenseManager = B5DC574D12F14BF300424BBF /* Code sense */;
+		executables = (
+			B5DC573912F14BED00424BBF /* BEEntityManager */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					1474,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					1283,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 317803589;
+			PBXWorkspaceStateSaveDate = 317803589;
+		};
+		perUserProjectItems = {
+			B5DC576712F14D1D00424BBF /* PBXTextBookmark */ = B5DC576712F14D1D00424BBF /* PBXTextBookmark */;
+			B5DC576812F14D1D00424BBF /* PBXTextBookmark */ = B5DC576812F14D1D00424BBF /* PBXTextBookmark */;
+			B5DC576912F14D1D00424BBF /* PBXTextBookmark */ = B5DC576912F14D1D00424BBF /* PBXTextBookmark */;
+			B5DC576A12F14D1D00424BBF /* PBXTextBookmark */ = B5DC576A12F14D1D00424BBF /* PBXTextBookmark */;
+			B5DC576B12F14D1D00424BBF /* PBXBookmark */ = B5DC576B12F14D1D00424BBF /* PBXBookmark */;
+			B5DC576C12F14D1D00424BBF /* PBXTextBookmark */ = B5DC576C12F14D1D00424BBF /* PBXTextBookmark */;
+		};
+		sourceControlManager = B5DC574C12F14BF300424BBF /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	B5DC573912F14BED00424BBF /* BEEntityManager */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = BEEntityManager;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	B5DC574C12F14BF300424BBF /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	B5DC574D12F14BF300424BBF /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	B5DC575E12F14C5B00424BBF /* BEEntityManager.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1652, 3510}}";
+			sepNavSelRange = "{6478, 0}";
+			sepNavVisRange = "{5570, 1056}";
+		};
+	};
+	B5DC575F12F14C5B00424BBF /* BEEntityManager.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1652, 652}}";
+			sepNavSelRange = "{1035, 0}";
+			sepNavVisRange = "{0, 1274}";
+		};
+	};
+	B5DC576112F14C5B00424BBF /* BEEntityFetcher.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1652, 652}}";
+			sepNavSelRange = "{865, 0}";
+			sepNavVisRange = "{0, 865}";
+		};
+	};
+	B5DC576512F14CF900424BBF /* BEEntityManagerTest.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1652, 806}}";
+			sepNavSelRange = "{282, 0}";
+			sepNavVisRange = "{0, 812}";
+		};
+	};
+	B5DC576712F14D1D00424BBF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* BEEntityManagerAppDelegate.m */;
+		name = "BEEntityManagerAppDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 385;
+		vrLoc = 0;
+	};
+	B5DC576812F14D1D00424BBF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B5DC576112F14C5B00424BBF /* BEEntityFetcher.h */;
+		name = "BEEntityFetcher.h: 31";
+		rLen = 0;
+		rLoc = 865;
+		rType = 0;
+		vrLen = 865;
+		vrLoc = 0;
+	};
+	B5DC576912F14D1D00424BBF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B5DC575F12F14C5B00424BBF /* BEEntityManager.h */;
+		name = "BEEntityManager.h: 32";
+		rLen = 0;
+		rLoc = 1035;
+		rType = 0;
+		vrLen = 1274;
+		vrLoc = 0;
+	};
+	B5DC576A12F14D1D00424BBF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B5DC575E12F14C5B00424BBF /* BEEntityManager.m */;
+		name = "BEEntityManager.m: 107";
+		rLen = 0;
+		rLoc = 2483;
+		rType = 0;
+		vrLen = 1375;
+		vrLoc = 0;
+	};
+	B5DC576B12F14D1D00424BBF /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = B5DC576512F14CF900424BBF /* BEEntityManagerTest.m */;
+	};
+	B5DC576C12F14D1D00424BBF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B5DC576512F14CF900424BBF /* BEEntityManagerTest.m */;
+		name = "EntityManagerTest.m: 17";
+		rLen = 0;
+		rLoc = 244;
+		rType = 0;
+		vrLen = 770;
+		vrLoc = 0;
+	};
+}

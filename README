@@ -1,0 +1,6 @@
+
+This is an EntityManager I use in my Objective-C projects to simplify interaction with Core Data.  
+
+I find the Core Data API to be rather cumbersome and exceedingly verbose.. so I created this to simplify things.
+
+I need to do some clean up and finish up the unit tests.. should be ready soon.
