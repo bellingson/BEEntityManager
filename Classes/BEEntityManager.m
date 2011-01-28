@@ -5,11 +5,10 @@
 #import "BEEntityManager.h"
 #import "BEEntityFetcher.h"
 
-#define DOCUMENTS_FOLDER [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
 
 @implementation BEEntityManager
 
-@synthesize managedObjectContext, defaultSortField;
+@synthesize managedObjectContext;
 
 static NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
@@ -19,13 +18,16 @@ static NSPersistentStoreCoordinator *persistentStoreCoordinator;
 	if (self != nil) {
 		NSManagedObjectContext *context = [self managedObjectContext];		
 		self.managedObjectContext = context;
-		self.defaultSortField = @"ID";
 	}
 	return self;
 }
 
+#pragma mark -
+#pragma mark query
 
-#pragma mark Entity Management
+- (NSArray*) query: (NSString *) entityName {
+	return [self query: entityName criteria: nil sort: nil ascending: YES];
+}
 
 - (NSArray*) query: (NSString *) entityName criteria: (NSString *) crit sort: (NSString *) sort  {
 	return [self query: entityName criteria:crit sort:sort ascending: YES];
@@ -44,7 +46,7 @@ static NSPersistentStoreCoordinator *persistentStoreCoordinator;
 	
 
 	if (sort == nil) {
-		sort = defaultSortField;
+		sort = DEFAULT_SORT_FIELD;
 	}
     
     BEEntityFetcher *entityFetcher = [[BEEntityFetcher alloc] initWith: managedObjectContext entityName: entityName sort:sort ascending:asc ];
@@ -67,15 +69,6 @@ static NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 #pragma mark -
 #pragma mark get
-
-- (id) get: (id) entity {
-	
-	if (entity == nil) {
-		return nil;
-	}
-
-	return [self.managedObjectContext objectWithID: [entity objectID]];
-}
 
 
 - (id) get: (NSString *) entityName criteria: (NSString *) crit {
@@ -113,8 +106,20 @@ static NSPersistentStoreCoordinator *persistentStoreCoordinator;
 	return r;	
 }
 
+- (id) get: (id) entity {
+	
+	if (entity == nil) {
+		return nil;
+	}
+	
+	return [self.managedObjectContext objectWithID: [entity objectID]];
+}
 
-- (id) createEntity: (NSString *) entityName {
+
+#pragma mark -
+#pragma mark create
+
+- (id) create: (NSString *) entityName {
 	
     NSEntityDescription *entity = [NSEntityDescription entityForName: entityName inManagedObjectContext: managedObjectContext];
     
@@ -122,16 +127,19 @@ static NSPersistentStoreCoordinator *persistentStoreCoordinator;
 }
 
 
-- (id) createOrUpdateEntity: (NSString *) entityName ID: (NSNumber *) ID {
+- (id) createOrUpdate: (NSString *) entityName ID: (NSNumber *) ID {
 	
 	id entity = [self get:entityName ID:ID];
 	
 	if(entity == nil) {
-		entity = [self createEntity:entityName];
+		entity = [self create:entityName];
 		[entity setID: ID];
 	}
 	return entity;	
 }
+
+#pragma mark -
+#pragma mark save
 
 - (BOOL) save {
 	
@@ -142,6 +150,26 @@ static NSPersistentStoreCoordinator *persistentStoreCoordinator;
 	}
     return YES;
 }
+
+- (void)saveContext {
+    
+    NSError *error = nil;
+	NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
+    if (managedObjectContext != nil) {
+        if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
+            /*
+             Replace this implementation with code to handle the error appropriately.
+             
+             abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
+             */
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        } 
+    }
+}    
+
+#pragma mark -
+#pragma mark delete
 
 - (void) delete: (NSManagedObject *) entity {
 	if (entity == nil) return;
@@ -207,12 +235,12 @@ static NSPersistentStoreCoordinator *persistentStoreCoordinator;
 	NSError *error = nil;	
 	
 	NSManagedObjectModel *managedObjectModel = [[NSManagedObjectModel mergedModelFromBundles:nil] retain];    
-	//NSLog(@"managed object model: %@",managedObjectModel);
+
     persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:managedObjectModel];
 	[managedObjectModel release];
 	
 	NSPersistentStore *store = [persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeUrl options:nil error:&error];
-	//NSLog(@"initialized: %@ : %@",storePath,store);
+
 	
     if (!store) {
 		
@@ -256,12 +284,13 @@ static NSPersistentStoreCoordinator *persistentStoreCoordinator;
 }
 
 
+
+
 #pragma mark -
 #pragma mark dealloc
 
 - (void) dealloc
 {
-	[defaultSortField release];
 	[managedObjectContext release];
 	[super dealloc];
 }

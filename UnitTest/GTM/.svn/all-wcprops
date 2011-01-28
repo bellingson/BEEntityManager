@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/loyal/!svn/ver/2504/iphone/MyDealsInbox/trunk/UnitTest/GTM
+END
+GTMSenTestCase.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/loyal/!svn/ver/2504/iphone/MyDealsInbox/trunk/UnitTest/GTM/GTMSenTestCase.h
+END
+GTMNSNumber+64Bit.m
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/loyal/!svn/ver/2504/iphone/MyDealsInbox/trunk/UnitTest/GTM/GTMNSNumber+64Bit.m
+END
+GTMIPhoneUnitTestDelegate.m
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/loyal/!svn/ver/2504/iphone/MyDealsInbox/trunk/UnitTest/GTM/GTMIPhoneUnitTestDelegate.m
+END
+RunIPhoneUnitTest.sh
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/loyal/!svn/ver/2504/iphone/MyDealsInbox/trunk/UnitTest/GTM/RunIPhoneUnitTest.sh
+END
+GTMNSObject+UnitTesting.m
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/loyal/!svn/ver/2504/iphone/MyDealsInbox/trunk/UnitTest/GTM/GTMNSObject+UnitTesting.m
+END
+GTMSenTestCase.m
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/loyal/!svn/ver/2504/iphone/MyDealsInbox/trunk/UnitTest/GTM/GTMSenTestCase.m
+END
+GTMCALayer+UnitTesting.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/loyal/!svn/ver/2504/iphone/MyDealsInbox/trunk/UnitTest/GTM/GTMCALayer+UnitTesting.h
+END
+GTMSystemVersion.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/loyal/!svn/ver/2504/iphone/MyDealsInbox/trunk/UnitTest/GTM/GTMSystemVersion.h
+END
+GTMIPhoneUnitTestMain.m
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/loyal/!svn/ver/2504/iphone/MyDealsInbox/trunk/UnitTest/GTM/GTMIPhoneUnitTestMain.m
+END
+GTMCALayer+UnitTesting.m
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/loyal/!svn/ver/2504/iphone/MyDealsInbox/trunk/UnitTest/GTM/GTMCALayer+UnitTesting.m
+END
+GTMUIKit+UnitTesting.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/loyal/!svn/ver/2504/iphone/MyDealsInbox/trunk/UnitTest/GTM/GTMUIKit+UnitTesting.h
+END
+GTMSystemVersion.m
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/loyal/!svn/ver/2504/iphone/MyDealsInbox/trunk/UnitTest/GTM/GTMSystemVersion.m
+END
+GTMObjC2Runtime.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/loyal/!svn/ver/2504/iphone/MyDealsInbox/trunk/UnitTest/GTM/GTMObjC2Runtime.h
+END
+GTMUIKit+UnitTesting.m
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/loyal/!svn/ver/2504/iphone/MyDealsInbox/trunk/UnitTest/GTM/GTMUIKit+UnitTesting.m
+END
+GTMGarbageCollection.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/loyal/!svn/ver/2504/iphone/MyDealsInbox/trunk/UnitTest/GTM/GTMGarbageCollection.h
+END
+GTMObjC2Runtime.m
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/loyal/!svn/ver/2504/iphone/MyDealsInbox/trunk/UnitTest/GTM/GTMObjC2Runtime.m
+END
+GTMNSNumber+64Bit.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/loyal/!svn/ver/2504/iphone/MyDealsInbox/trunk/UnitTest/GTM/GTMNSNumber+64Bit.h
+END
+GTMIPhoneUnitTestDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/loyal/!svn/ver/2504/iphone/MyDealsInbox/trunk/UnitTest/GTM/GTMIPhoneUnitTestDelegate.h
+END
+GTMDefines.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/loyal/!svn/ver/2504/iphone/MyDealsInbox/trunk/UnitTest/GTM/GTMDefines.h
+END
+GTMNSObject+UnitTesting.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/loyal/!svn/ver/2504/iphone/MyDealsInbox/trunk/UnitTest/GTM/GTMNSObject+UnitTesting.h
+END

@@ -3,7 +3,7 @@
 //  UberConf
 //
 //  Created by Ben Ellingson on 10/7/10.
-//  Copyright (c) 2010 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2010 Northstar New Media. All rights reserved.
 //
 /// EntityFetcher consolidates some of the cruft needed to use a FetchResultsController 
 //

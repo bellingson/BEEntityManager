@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D3623260D0F684500981E51 /* BEEntityManagerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* BEEntityManagerAppDelegate.m */; };
+		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -15,17 +15,39 @@
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		2899E5600DE3E45000AC0155 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E55F0DE3E45000AC0155 /* RootViewController.xib */; };
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
-		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
+		28C286E10D94DF7D0034E888 /* BookListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* BookListController.m */; };
 		28D3F202112F7DC200FD0661 /* BEEntityManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28D3F201112F7DC200FD0661 /* BEEntityManager.xcdatamodeld */; };
 		B5DC576212F14C5B00424BBF /* BEEntityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC575E12F14C5B00424BBF /* BEEntityManager.m */; };
 		B5DC576312F14C5B00424BBF /* BEEntityFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC576012F14C5B00424BBF /* BEEntityFetcher.m */; };
-		B5DC578812F14E3900424BBF /* README in Resources */ = {isa = PBXBuildFile; fileRef = B5DC578712F14E3900424BBF /* README */; };
+		B5DC57FA12F26AFB00424BBF /* TestData.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC57F912F26AFB00424BBF /* TestData.m */; };
+		B5DC581512F26F3D00424BBF /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC581412F26F3D00424BBF /* Book.m */; };
+		B5DC586B12F2738A00424BBF /* BookDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC586A12F2738A00424BBF /* BookDetailController.m */; };
+		B5DC589C12F2748100424BBF /* BEEntityManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28D3F201112F7DC200FD0661 /* BEEntityManager.xcdatamodeld */; };
+		B5DC589D12F2748100424BBF /* BEEntityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC575E12F14C5B00424BBF /* BEEntityManager.m */; };
+		B5DC589E12F2748100424BBF /* BEEntityFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC576012F14C5B00424BBF /* BEEntityFetcher.m */; };
+		B5DC589F12F2748100424BBF /* TestData.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC57F912F26AFB00424BBF /* TestData.m */; };
+		B5DC599212F274D500424BBF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		B5DC599312F274D500424BBF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		B5DC599412F274D500424BBF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
+		B5DC599512F274D500424BBF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28860BE40F44EE6400985440 /* CoreData.framework */; };
+		B5DC59AB12F274FF00424BBF /* GTMCALayer+UnitTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC599812F274FF00424BBF /* GTMCALayer+UnitTesting.m */; };
+		B5DC59AC12F274FF00424BBF /* GTMIPhoneUnitTestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC599C12F274FF00424BBF /* GTMIPhoneUnitTestDelegate.m */; };
+		B5DC59AD12F274FF00424BBF /* GTMIPhoneUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC599D12F274FF00424BBF /* GTMIPhoneUnitTestMain.m */; };
+		B5DC59AE12F274FF00424BBF /* GTMNSNumber+64Bit.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC599F12F274FF00424BBF /* GTMNSNumber+64Bit.m */; };
+		B5DC59AF12F274FF00424BBF /* GTMNSObject+UnitTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC59A112F274FF00424BBF /* GTMNSObject+UnitTesting.m */; };
+		B5DC59B012F274FF00424BBF /* GTMObjC2Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC59A312F274FF00424BBF /* GTMObjC2Runtime.m */; };
+		B5DC59B112F274FF00424BBF /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC59A512F274FF00424BBF /* GTMSenTestCase.m */; };
+		B5DC59B212F274FF00424BBF /* GTMSystemVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC59A712F274FF00424BBF /* GTMSystemVersion.m */; };
+		B5DC59B312F274FF00424BBF /* GTMUIKit+UnitTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC59A912F274FF00424BBF /* GTMUIKit+UnitTesting.m */; };
+		B5DC59B612F2752400424BBF /* libgcov.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DC59B512F2752400424BBF /* libgcov.a */; };
+		B5DC59C712F277CF00424BBF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DC59C612F277CF00424BBF /* QuartzCore.framework */; };
+		B5DC59CE12F2785900424BBF /* BEEntityManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC576512F14CF900424BBF /* BEEntityManagerTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D3623240D0F684500981E51 /* BEEntityManagerAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEEntityManagerAppDelegate.h; sourceTree = "<group>"; };
-		1D3623250D0F684500981E51 /* BEEntityManagerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEEntityManagerAppDelegate.m; sourceTree = "<group>"; };
+		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* BEEntityManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BEEntityManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		28860B760F44E54D00985440 /* BEEntityManager.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = BEEntityManager.xcdatamodel; sourceTree = "<group>"; };
@@ -34,16 +56,46 @@
 		2899E55F0DE3E45000AC0155 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		28A0AAE50D9B0CCF005BE974 /* BEEntityManager_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEEntityManager_Prefix.pch; sourceTree = "<group>"; };
 		28AD735F0D9D9599002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		28C286DF0D94DF7D0034E888 /* BookListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookListController.h; sourceTree = "<group>"; };
+		28C286E00D94DF7D0034E888 /* BookListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookListController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* BEEntityManager-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BEEntityManager-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		B5DC575E12F14C5B00424BBF /* BEEntityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEEntityManager.m; sourceTree = "<group>"; };
-		B5DC575F12F14C5B00424BBF /* BEEntityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEEntityManager.h; sourceTree = "<group>"; };
-		B5DC576012F14C5B00424BBF /* BEEntityFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEEntityFetcher.m; sourceTree = "<group>"; };
-		B5DC576112F14C5B00424BBF /* BEEntityFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEEntityFetcher.h; sourceTree = "<group>"; };
+		B5DC575E12F14C5B00424BBF /* BEEntityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BEEntityManager.m; path = Classes/BEEntityManager.m; sourceTree = "<group>"; };
+		B5DC575F12F14C5B00424BBF /* BEEntityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BEEntityManager.h; path = Classes/BEEntityManager.h; sourceTree = "<group>"; };
+		B5DC576012F14C5B00424BBF /* BEEntityFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BEEntityFetcher.m; path = Classes/BEEntityFetcher.m; sourceTree = "<group>"; };
+		B5DC576112F14C5B00424BBF /* BEEntityFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BEEntityFetcher.h; path = Classes/BEEntityFetcher.h; sourceTree = "<group>"; };
 		B5DC576512F14CF900424BBF /* BEEntityManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEEntityManagerTest.m; sourceTree = "<group>"; };
 		B5DC578712F14E3900424BBF /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		B5DC57F812F26AFB00424BBF /* TestData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestData.h; sourceTree = "<group>"; };
+		B5DC57F912F26AFB00424BBF /* TestData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestData.m; sourceTree = "<group>"; };
+		B5DC581312F26F3D00424BBF /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Book.h; path = Model/Book.h; sourceTree = "<group>"; };
+		B5DC581412F26F3D00424BBF /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Book.m; path = Model/Book.m; sourceTree = "<group>"; };
+		B5DC586912F2738A00424BBF /* BookDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookDetailController.h; sourceTree = "<group>"; };
+		B5DC586A12F2738A00424BBF /* BookDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookDetailController.m; sourceTree = "<group>"; };
+		B5DC589612F2745500424BBF /* UnitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5DC599712F274FF00424BBF /* GTMCALayer+UnitTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMCALayer+UnitTesting.h"; sourceTree = "<group>"; };
+		B5DC599812F274FF00424BBF /* GTMCALayer+UnitTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMCALayer+UnitTesting.m"; sourceTree = "<group>"; };
+		B5DC599912F274FF00424BBF /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		B5DC599A12F274FF00424BBF /* GTMGarbageCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMGarbageCollection.h; sourceTree = "<group>"; };
+		B5DC599B12F274FF00424BBF /* GTMIPhoneUnitTestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMIPhoneUnitTestDelegate.h; sourceTree = "<group>"; };
+		B5DC599C12F274FF00424BBF /* GTMIPhoneUnitTestDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMIPhoneUnitTestDelegate.m; sourceTree = "<group>"; };
+		B5DC599D12F274FF00424BBF /* GTMIPhoneUnitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMIPhoneUnitTestMain.m; sourceTree = "<group>"; };
+		B5DC599E12F274FF00424BBF /* GTMNSNumber+64Bit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSNumber+64Bit.h"; sourceTree = "<group>"; };
+		B5DC599F12F274FF00424BBF /* GTMNSNumber+64Bit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSNumber+64Bit.m"; sourceTree = "<group>"; };
+		B5DC59A012F274FF00424BBF /* GTMNSObject+UnitTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSObject+UnitTesting.h"; sourceTree = "<group>"; };
+		B5DC59A112F274FF00424BBF /* GTMNSObject+UnitTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSObject+UnitTesting.m"; sourceTree = "<group>"; };
+		B5DC59A212F274FF00424BBF /* GTMObjC2Runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMObjC2Runtime.h; sourceTree = "<group>"; };
+		B5DC59A312F274FF00424BBF /* GTMObjC2Runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMObjC2Runtime.m; sourceTree = "<group>"; };
+		B5DC59A412F274FF00424BBF /* GTMSenTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMSenTestCase.h; sourceTree = "<group>"; };
+		B5DC59A512F274FF00424BBF /* GTMSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMSenTestCase.m; sourceTree = "<group>"; };
+		B5DC59A612F274FF00424BBF /* GTMSystemVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMSystemVersion.h; sourceTree = "<group>"; };
+		B5DC59A712F274FF00424BBF /* GTMSystemVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMSystemVersion.m; sourceTree = "<group>"; };
+		B5DC59A812F274FF00424BBF /* GTMUIKit+UnitTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMUIKit+UnitTesting.h"; sourceTree = "<group>"; };
+		B5DC59A912F274FF00424BBF /* GTMUIKit+UnitTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMUIKit+UnitTesting.m"; sourceTree = "<group>"; };
+		B5DC59AA12F274FF00424BBF /* RunIPhoneUnitTest.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = RunIPhoneUnitTest.sh; sourceTree = "<group>"; };
+		B5DC59B512F2752400424BBF /* libgcov.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgcov.a; path = UnitTest/libgcov.a; sourceTree = "<group>"; };
+		B5DC59C612F277CF00424BBF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B5DC5A0812F27AF000424BBF /* UnitTest-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "UnitTest-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,20 +110,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5DC589412F2745500424BBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5DC599212F274D500424BBF /* Foundation.framework in Frameworks */,
+				B5DC599312F274D500424BBF /* UIKit.framework in Frameworks */,
+				B5DC599412F274D500424BBF /* CoreGraphics.framework in Frameworks */,
+				B5DC599512F274D500424BBF /* CoreData.framework in Frameworks */,
+				B5DC59B612F2752400424BBF /* libgcov.a in Frameworks */,
+				B5DC59C712F277CF00424BBF /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				B5DC575E12F14C5B00424BBF /* BEEntityManager.m */,
-				B5DC575F12F14C5B00424BBF /* BEEntityManager.h */,
-				B5DC576012F14C5B00424BBF /* BEEntityFetcher.m */,
-				B5DC576112F14C5B00424BBF /* BEEntityFetcher.h */,
-				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
-				28C286E00D94DF7D0034E888 /* RootViewController.m */,
-				1D3623240D0F684500981E51 /* BEEntityManagerAppDelegate.h */,
-				1D3623250D0F684500981E51 /* BEEntityManagerAppDelegate.m */,
+				28C286DF0D94DF7D0034E888 /* BookListController.h */,
+				28C286E00D94DF7D0034E888 /* BookListController.m */,
+				B5DC586912F2738A00424BBF /* BookDetailController.h */,
+				B5DC586A12F2738A00424BBF /* BookDetailController.m */,
+				1D3623240D0F684500981E51 /* AppDelegate.h */,
+				1D3623250D0F684500981E51 /* AppDelegate.m */,
+				B5DC57F812F26AFB00424BBF /* TestData.h */,
+				B5DC57F912F26AFB00424BBF /* TestData.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -80,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				1D6058910D05DD3D006BFB54 /* BEEntityManager.app */,
+				B5DC589612F2745500424BBF /* UnitTest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,12 +154,15 @@
 			isa = PBXGroup;
 			children = (
 				B5DC578712F14E3900424BBF /* README */,
+				B5DC57D212F2664500424BBF /* EntityManager */,
 				080E96DDFE201D6D7F000001 /* Classes */,
+				B5DC57D112F2662F00424BBF /* Model */,
 				B5DC576412F14CF900424BBF /* UnitTest */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				B5DC59C612F277CF00424BBF /* QuartzCore.framework */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -125,6 +194,7 @@
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
 				28860BE40F44EE6400985440 /* CoreData.framework */,
+				B5DC59B512F2752400424BBF /* libgcov.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -132,9 +202,58 @@
 		B5DC576412F14CF900424BBF /* UnitTest */ = {
 			isa = PBXGroup;
 			children = (
+				B5DC5A0812F27AF000424BBF /* UnitTest-Info.plist */,
+				B5DC599612F274FF00424BBF /* GTM */,
 				B5DC576512F14CF900424BBF /* BEEntityManagerTest.m */,
 			);
 			path = UnitTest;
+			sourceTree = "<group>";
+		};
+		B5DC57D112F2662F00424BBF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5DC581312F26F3D00424BBF /* Book.h */,
+				B5DC581412F26F3D00424BBF /* Book.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B5DC57D212F2664500424BBF /* EntityManager */ = {
+			isa = PBXGroup;
+			children = (
+				B5DC575E12F14C5B00424BBF /* BEEntityManager.m */,
+				B5DC575F12F14C5B00424BBF /* BEEntityManager.h */,
+				B5DC576012F14C5B00424BBF /* BEEntityFetcher.m */,
+				B5DC576112F14C5B00424BBF /* BEEntityFetcher.h */,
+			);
+			name = EntityManager;
+			sourceTree = "<group>";
+		};
+		B5DC599612F274FF00424BBF /* GTM */ = {
+			isa = PBXGroup;
+			children = (
+				B5DC599712F274FF00424BBF /* GTMCALayer+UnitTesting.h */,
+				B5DC599812F274FF00424BBF /* GTMCALayer+UnitTesting.m */,
+				B5DC599912F274FF00424BBF /* GTMDefines.h */,
+				B5DC599A12F274FF00424BBF /* GTMGarbageCollection.h */,
+				B5DC599B12F274FF00424BBF /* GTMIPhoneUnitTestDelegate.h */,
+				B5DC599C12F274FF00424BBF /* GTMIPhoneUnitTestDelegate.m */,
+				B5DC599D12F274FF00424BBF /* GTMIPhoneUnitTestMain.m */,
+				B5DC599E12F274FF00424BBF /* GTMNSNumber+64Bit.h */,
+				B5DC599F12F274FF00424BBF /* GTMNSNumber+64Bit.m */,
+				B5DC59A012F274FF00424BBF /* GTMNSObject+UnitTesting.h */,
+				B5DC59A112F274FF00424BBF /* GTMNSObject+UnitTesting.m */,
+				B5DC59A212F274FF00424BBF /* GTMObjC2Runtime.h */,
+				B5DC59A312F274FF00424BBF /* GTMObjC2Runtime.m */,
+				B5DC59A412F274FF00424BBF /* GTMSenTestCase.h */,
+				B5DC59A512F274FF00424BBF /* GTMSenTestCase.m */,
+				B5DC59A612F274FF00424BBF /* GTMSystemVersion.h */,
+				B5DC59A712F274FF00424BBF /* GTMSystemVersion.m */,
+				B5DC59A812F274FF00424BBF /* GTMUIKit+UnitTesting.h */,
+				B5DC59A912F274FF00424BBF /* GTMUIKit+UnitTesting.m */,
+				B5DC59AA12F274FF00424BBF /* RunIPhoneUnitTest.sh */,
+			);
+			path = GTM;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,11 +276,31 @@
 			productReference = 1D6058910D05DD3D006BFB54 /* BEEntityManager.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B5DC589512F2745500424BBF /* UnitTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5DC589B12F2745600424BBF /* Build configuration list for PBXNativeTarget "UnitTest" */;
+			buildPhases = (
+				B5DC589212F2745500424BBF /* Resources */,
+				B5DC589312F2745500424BBF /* Sources */,
+				B5DC589412F2745500424BBF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UnitTest;
+			productName = UnitTest;
+			productReference = B5DC589612F2745500424BBF /* UnitTest.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "http://benellingson.blogspot.com";
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "BEEntityManager" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -178,6 +317,7 @@
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* BEEntityManager */,
+				B5DC589512F2745500424BBF /* UnitTest */,
 			);
 		};
 /* End PBXProject section */
@@ -189,7 +329,13 @@
 			files = (
 				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
 				2899E5600DE3E45000AC0155 /* RootViewController.xib in Resources */,
-				B5DC578812F14E3900424BBF /* README in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5DC589212F2745500424BBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,11 +347,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
-				1D3623260D0F684500981E51 /* BEEntityManagerAppDelegate.m in Sources */,
-				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
+				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
+				28C286E10D94DF7D0034E888 /* BookListController.m in Sources */,
 				28D3F202112F7DC200FD0661 /* BEEntityManager.xcdatamodeld in Sources */,
 				B5DC576212F14C5B00424BBF /* BEEntityManager.m in Sources */,
 				B5DC576312F14C5B00424BBF /* BEEntityFetcher.m in Sources */,
+				B5DC57FA12F26AFB00424BBF /* TestData.m in Sources */,
+				B5DC581512F26F3D00424BBF /* Book.m in Sources */,
+				B5DC586B12F2738A00424BBF /* BookDetailController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5DC589312F2745500424BBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5DC589C12F2748100424BBF /* BEEntityManager.xcdatamodeld in Sources */,
+				B5DC589D12F2748100424BBF /* BEEntityManager.m in Sources */,
+				B5DC589E12F2748100424BBF /* BEEntityFetcher.m in Sources */,
+				B5DC589F12F2748100424BBF /* TestData.m in Sources */,
+				B5DC59AB12F274FF00424BBF /* GTMCALayer+UnitTesting.m in Sources */,
+				B5DC59AC12F274FF00424BBF /* GTMIPhoneUnitTestDelegate.m in Sources */,
+				B5DC59AD12F274FF00424BBF /* GTMIPhoneUnitTestMain.m in Sources */,
+				B5DC59AE12F274FF00424BBF /* GTMNSNumber+64Bit.m in Sources */,
+				B5DC59AF12F274FF00424BBF /* GTMNSObject+UnitTesting.m in Sources */,
+				B5DC59B012F274FF00424BBF /* GTMObjC2Runtime.m in Sources */,
+				B5DC59B112F274FF00424BBF /* GTMSenTestCase.m in Sources */,
+				B5DC59B212F274FF00424BBF /* GTMSystemVersion.m in Sources */,
+				B5DC59B312F274FF00424BBF /* GTMUIKit+UnitTesting.m in Sources */,
+				B5DC59CE12F2785900424BBF /* BEEntityManagerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,12 +409,130 @@
 			};
 			name = Release;
 		};
+		B5DC589912F2745600424BBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "UnitTest/UnitTest-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/UnitTest\"",
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = UnitTest;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B5DC589A12F2745600424BBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "UnitTest-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/UnitTest\"",
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = UnitTest;
+				SDKROOT = iphoneos;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		B5DC5A0112F27A0700424BBF /* GCov Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				GCC_PREFIX_HEADER = "UnitTest/UnitTest-Info.plist";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-lgov";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = "GCov Debug";
+		};
+		B5DC5A0212F27A0700424BBF /* GCov Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = BEEntityManager_Prefix.pch;
+				INFOPLIST_FILE = "BEEntityManager-Info.plist";
+				PRODUCT_NAME = BEEntityManager;
+			};
+			name = "GCov Debug";
+		};
+		B5DC5A0312F27A0700424BBF /* GCov Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "UnitTest/UnitTest-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/UnitTest\"",
+				);
+				OTHER_LDFLAGS = (
+					"-lgcov",
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = UnitTest;
+				SDKROOT = iphoneos;
+			};
+			name = "GCov Debug";
+		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
@@ -273,7 +561,18 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
+				B5DC5A0212F27A0700424BBF /* GCov Debug */,
 				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5DC589B12F2745600424BBF /* Build configuration list for PBXNativeTarget "UnitTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5DC589912F2745600424BBF /* Debug */,
+				B5DC5A0312F27A0700424BBF /* GCov Debug */,
+				B5DC589A12F2745600424BBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -282,6 +581,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
+				B5DC5A0112F27A0700424BBF /* GCov Debug */,
 				C01FCF5008A954540054247B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
