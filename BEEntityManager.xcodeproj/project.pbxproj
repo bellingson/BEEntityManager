@@ -41,6 +41,7 @@
 		B5DC59C712F277CF00424BBF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DC59C612F277CF00424BBF /* QuartzCore.framework */; };
 		B5DC59CE12F2785900424BBF /* BEEntityManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC576512F14CF900424BBF /* BEEntityManagerTest.m */; };
 		B5DC5CC912F29EE100424BBF /* BEEntityManagerContext.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC5CC812F29EE100424BBF /* BEEntityManagerContext.m */; };
+		B5DC5F3212F340B800424BBF /* CoreDataScratchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC5F3112F340B800424BBF /* CoreDataScratchTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +96,7 @@
 		B5DC5A0812F27AF000424BBF /* UnitTest-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "UnitTest-Info.plist"; sourceTree = "<group>"; };
 		B5DC5CC712F29EE100424BBF /* BEEntityManagerContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BEEntityManagerContext.h; path = Classes/BEEntityManagerContext.h; sourceTree = "<group>"; };
 		B5DC5CC812F29EE100424BBF /* BEEntityManagerContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BEEntityManagerContext.m; path = Classes/BEEntityManagerContext.m; sourceTree = "<group>"; };
+		B5DC5F3112F340B800424BBF /* CoreDataScratchTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataScratchTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 				B5DC5A0812F27AF000424BBF /* UnitTest-Info.plist */,
 				B5DC599612F274FF00424BBF /* GTM */,
 				B5DC576512F14CF900424BBF /* BEEntityManagerTest.m */,
+				B5DC5F3112F340B800424BBF /* CoreDataScratchTest.m */,
 			);
 			path = UnitTest;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				B5DC59B312F274FF00424BBF /* GTMUIKit+UnitTesting.m in Sources */,
 				B5DC59CE12F2785900424BBF /* BEEntityManagerTest.m in Sources */,
 				B5DC5CC912F29EE100424BBF /* BEEntityManagerContext.m in Sources */,
+				B5DC5F3212F340B800424BBF /* CoreDataScratchTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

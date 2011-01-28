@@ -1,6 +1,129 @@
+If you plan to create an iPhone, iPad, or Cocoa application that requires data 
+storage, you are going to need to use the Core Data framework.  Core Data is a 
+great framework.  It saves you the pain of writing redundant data access code.. 
+SQL, etc.  Also, I really like the graphical tool used to create entity models.
 
-This is an EntityManager I use in my Objective-C projects to simplify interaction with Core Data.  
+However, I find the Core Data API to be overly complicated and exceedingly 
+verbose.  When compared to other modern ORM APIs, it takes a lot of work to do 
+simple entity management tasks.
 
-I find the Core Data API to be rather cumbersome and exceedingly verbose.. so I created this to simplify things.
+Example: Fetch a Collection of Books using Core Data
+----------------------------------------------------------------------------------
 
-I need to do some clean up and finish up the unit tests.. should be ready soon.
+- (void) testCoreDataQuery {
+ 
+ NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+ 
+ 
+ NSFetchRequest *fetchRequest = [[[NSFetchRequest alloc] init] autorelease];
+ 
+ fetchRequest.entity = [NSEntityDescription entityForName: @"Book" 
+    inManagedObjectContext: managedObjectContext];
+
+
+ NSSortDescriptor *sortDescriptor = [[[NSSortDescriptor alloc] 
+           initWithKey: @"title"  ascending: YES] autorelease];
+ [fetchRequest setSortDescriptors: [NSArray arrayWithObject: sortDescriptor]];
+
+  
+  
+ NSFetchedResultsController *fetchResultsController = 
+  [[[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest 
+          managedObjectContext:managedObjectContext
+         sectionNameKeyPath:nil
+            cacheName:nil] autorelease];
+ 
+ 
+ NSError *error = nil;
+ if(![fetchResultsController performFetch:&error]) {
+  NSLog(@"FETCH ERROR: %@",[error userInfo]);
+ }
+ 
+ NSArray *entities = [fetchResultsController fetchedObjects];
+ 
+ NSLog(@"found %d books",entities.count);
+ 
+}
+
+
+That is a lot of code to write to perform what should be a really simple operation.  
+This example doesn't even include any sort or selection criteria.  
+
+Introducing BEEntityManager
+----------------------------------------------------------------------------------
+
+To simplify interaction with Core Data, I created a simple Entity Manager API which 
+is inspired by the Java Persistence API.  I'm guessing there are other APIs like 
+this available, but I haven't bothered to look.  Let me know if you know of any.
+
+Example: Fetch a Collection Using BEEntityManager
+----------------------------------------------------------------------------------
+
+- (void) testBEEntityManagerQuery {
+ 
+ BEEntityManager *entityManager = [[[BEEntityManager alloc] init] autorelease];
+ 
+ NSArray *books = [entityManager query: @"Book" criteria: @"author = 'F. Scott Fitzgerald'" sort: @"title" ascending: YES ];
+ 
+ NSLog(@"found %d books",books.count);
+ 
+}
+
+This is a much easier and more maintainable way to interact with a data store.  
+To each their own though.. it's not for everyone... some people like pain.
+
+BEEntityManager API Features
+----------------------------------------------------------------------------------
+
+The entity manager includes simple methods for your common data store operations.
+
+query
+get
+create
+createOrUpdate
+save
+delete
+
+It also simplifies accessing and managing instances of NSManagedObjectContext.  
+This is helpful in apps of any significant size.
+
+Usage
+----------------------------------------------------------------------------------
+
+To use BEEntityManager, select the core data option when you create your 
+application template.  Then delete the boilerplate Core Data code.
+
+Initialize the data store in your App Delegate or once in your UnitTest setUp method.
+
+// from my App Delegate
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
+    
+    // Override point for customization after application launch.
+	[BEEntityManager createPersistentStoreCoordinator:@"Books.sqlite"];
+
+	.....
+
+}
+
+// from my UnitTest
+
+
+- (void) setUp {
+
+	// do once
+	static NSObject *obj = nil;
+	if (obj == nil) {
+		obj = [[NSObject alloc] init];
+
+		[BEEntityManager useDb: @"books_test.sqlite"];
+		
+		[TestData makeSomeData];
+		
+	}
+	
+}
+
+
+To see examples of how to use the API, take a look at the BEEntityManagerTest class.  
+If you find it useful, please let me know.
