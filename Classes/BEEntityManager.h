@@ -7,7 +7,6 @@
 
 #import <CoreData/CoreData.h>
 
-#define DOCUMENTS_FOLDER [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
 #define DEFAULT_SORT_FIELD @"ID"
 
 
@@ -17,7 +16,7 @@
 
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
-+ (void)createPersistentStoreCoordinator: (NSString *) storeName;
++ (void) useDb: (NSString *) dbName;
 
 - (id) get: (id) entity;
 - (id) get: (NSString *) entityName ID: (NSNumber *) ID;
@@ -32,6 +31,8 @@
 - (id) create: (NSString *) entityName;
 
 - (BOOL) save;
+- (void) saveContext;
+
 - (void) delete: (NSManagedObject *) entity;
 - (void) deleteItems: (NSArray *) entities;
 

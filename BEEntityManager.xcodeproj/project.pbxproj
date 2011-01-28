@@ -18,13 +18,11 @@
 		28C286E10D94DF7D0034E888 /* BookListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* BookListController.m */; };
 		28D3F202112F7DC200FD0661 /* BEEntityManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28D3F201112F7DC200FD0661 /* BEEntityManager.xcdatamodeld */; };
 		B5DC576212F14C5B00424BBF /* BEEntityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC575E12F14C5B00424BBF /* BEEntityManager.m */; };
-		B5DC576312F14C5B00424BBF /* BEEntityFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC576012F14C5B00424BBF /* BEEntityFetcher.m */; };
 		B5DC57FA12F26AFB00424BBF /* TestData.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC57F912F26AFB00424BBF /* TestData.m */; };
 		B5DC581512F26F3D00424BBF /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC581412F26F3D00424BBF /* Book.m */; };
 		B5DC586B12F2738A00424BBF /* BookDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC586A12F2738A00424BBF /* BookDetailController.m */; };
 		B5DC589C12F2748100424BBF /* BEEntityManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28D3F201112F7DC200FD0661 /* BEEntityManager.xcdatamodeld */; };
 		B5DC589D12F2748100424BBF /* BEEntityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC575E12F14C5B00424BBF /* BEEntityManager.m */; };
-		B5DC589E12F2748100424BBF /* BEEntityFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC576012F14C5B00424BBF /* BEEntityFetcher.m */; };
 		B5DC589F12F2748100424BBF /* TestData.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC57F912F26AFB00424BBF /* TestData.m */; };
 		B5DC599212F274D500424BBF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		B5DC599312F274D500424BBF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -42,6 +40,7 @@
 		B5DC59B612F2752400424BBF /* libgcov.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DC59B512F2752400424BBF /* libgcov.a */; };
 		B5DC59C712F277CF00424BBF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DC59C612F277CF00424BBF /* QuartzCore.framework */; };
 		B5DC59CE12F2785900424BBF /* BEEntityManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC576512F14CF900424BBF /* BEEntityManagerTest.m */; };
+		B5DC5CC912F29EE100424BBF /* BEEntityManagerContext.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DC5CC812F29EE100424BBF /* BEEntityManagerContext.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,8 +61,6 @@
 		8D1107310486CEB800E47090 /* BEEntityManager-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BEEntityManager-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		B5DC575E12F14C5B00424BBF /* BEEntityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BEEntityManager.m; path = Classes/BEEntityManager.m; sourceTree = "<group>"; };
 		B5DC575F12F14C5B00424BBF /* BEEntityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BEEntityManager.h; path = Classes/BEEntityManager.h; sourceTree = "<group>"; };
-		B5DC576012F14C5B00424BBF /* BEEntityFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BEEntityFetcher.m; path = Classes/BEEntityFetcher.m; sourceTree = "<group>"; };
-		B5DC576112F14C5B00424BBF /* BEEntityFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BEEntityFetcher.h; path = Classes/BEEntityFetcher.h; sourceTree = "<group>"; };
 		B5DC576512F14CF900424BBF /* BEEntityManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEEntityManagerTest.m; sourceTree = "<group>"; };
 		B5DC578712F14E3900424BBF /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		B5DC57F812F26AFB00424BBF /* TestData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestData.h; sourceTree = "<group>"; };
@@ -96,6 +93,8 @@
 		B5DC59B512F2752400424BBF /* libgcov.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgcov.a; path = UnitTest/libgcov.a; sourceTree = "<group>"; };
 		B5DC59C612F277CF00424BBF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B5DC5A0812F27AF000424BBF /* UnitTest-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "UnitTest-Info.plist"; sourceTree = "<group>"; };
+		B5DC5CC712F29EE100424BBF /* BEEntityManagerContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BEEntityManagerContext.h; path = Classes/BEEntityManagerContext.h; sourceTree = "<group>"; };
+		B5DC5CC812F29EE100424BBF /* BEEntityManagerContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BEEntityManagerContext.m; path = Classes/BEEntityManagerContext.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,8 +222,8 @@
 			children = (
 				B5DC575E12F14C5B00424BBF /* BEEntityManager.m */,
 				B5DC575F12F14C5B00424BBF /* BEEntityManager.h */,
-				B5DC576012F14C5B00424BBF /* BEEntityFetcher.m */,
-				B5DC576112F14C5B00424BBF /* BEEntityFetcher.h */,
+				B5DC5CC712F29EE100424BBF /* BEEntityManagerContext.h */,
+				B5DC5CC812F29EE100424BBF /* BEEntityManagerContext.m */,
 			);
 			name = EntityManager;
 			sourceTree = "<group>";
@@ -351,7 +350,6 @@
 				28C286E10D94DF7D0034E888 /* BookListController.m in Sources */,
 				28D3F202112F7DC200FD0661 /* BEEntityManager.xcdatamodeld in Sources */,
 				B5DC576212F14C5B00424BBF /* BEEntityManager.m in Sources */,
-				B5DC576312F14C5B00424BBF /* BEEntityFetcher.m in Sources */,
 				B5DC57FA12F26AFB00424BBF /* TestData.m in Sources */,
 				B5DC581512F26F3D00424BBF /* Book.m in Sources */,
 				B5DC586B12F2738A00424BBF /* BookDetailController.m in Sources */,
@@ -364,7 +362,6 @@
 			files = (
 				B5DC589C12F2748100424BBF /* BEEntityManager.xcdatamodeld in Sources */,
 				B5DC589D12F2748100424BBF /* BEEntityManager.m in Sources */,
-				B5DC589E12F2748100424BBF /* BEEntityFetcher.m in Sources */,
 				B5DC589F12F2748100424BBF /* TestData.m in Sources */,
 				B5DC59AB12F274FF00424BBF /* GTMCALayer+UnitTesting.m in Sources */,
 				B5DC59AC12F274FF00424BBF /* GTMIPhoneUnitTestDelegate.m in Sources */,
@@ -376,6 +373,7 @@
 				B5DC59B212F274FF00424BBF /* GTMSystemVersion.m in Sources */,
 				B5DC59B312F274FF00424BBF /* GTMUIKit+UnitTesting.m in Sources */,
 				B5DC59CE12F2785900424BBF /* BEEntityManagerTest.m in Sources */,
+				B5DC5CC912F29EE100424BBF /* BEEntityManagerContext.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

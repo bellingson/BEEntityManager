@@ -27,7 +27,7 @@
 	if (obj == nil) {
 		obj = [[NSObject alloc] init];
 
-		[BEEntityManager createPersistentStoreCoordinator: @"books_test.sqlite"];
+		[BEEntityManager useDb: @"books_test.sqlite"];
 		
 		[TestData makeSomeData];
 		
@@ -142,11 +142,11 @@
 	
 	Book *book3 = [books objectAtIndex: 3];
 	
-	NSComparisonResult *r1 = [book1.title compare: book2.title];
+	NSComparisonResult r1 = [book1.title compare: book2.title];
 	
 	STAssertTrue(r1 == NSOrderedAscending,@"ascending");
 	
-	NSComparisonResult *r2 = [book2.title compare: book3.title];	
+	NSComparisonResult r2 = [book2.title compare: book3.title];	
 	
 	STAssertTrue(r2 == NSOrderedAscending,@"ascending");
 	
@@ -172,11 +172,11 @@
 	
 	Book *book3 = [books objectAtIndex: 3];
 	
-	NSComparisonResult *r1 = [book1.title compare: book2.title];
+	NSComparisonResult r1 = [book1.title compare: book2.title];
 	
 	STAssertTrue(r1 == NSOrderedDescending,@"descending");
 	
-	NSComparisonResult *r2 = [book2.title compare: book3.title];	
+	NSComparisonResult r2 = [book2.title compare: book3.title];	
 	
 	STAssertTrue(r2 == NSOrderedDescending,@"descending");
 	
@@ -267,10 +267,12 @@
 
 
 - (void) testDelete {
+	
+	NSNumber *ID = [NSNumber numberWithInt: rand() * [NSDate timeIntervalSinceReferenceDate]];
 
 	TestData *data = [[TestData alloc] init];
 	Book *book = [data makeBook:@"Grapes of Wrath" withAuthor: @"John Steinbeck"];
-	book.ID = [NSNumber numberWithInt: rand() * [NSDate timeIntervalSinceReferenceDate]];
+	book.ID = ID;
 	[data.entityManager save];
 	[data release];
 	
@@ -287,7 +289,7 @@
 	[em release];
 	 
 	 BEEntityManager *em2 = [[BEEntityManager alloc] init];
-	Book *book3 = [em2 get: @"Book" ID: book.ID];
+	Book *book3 = [em2 get: @"Book" ID: ID];
 	 
 	 STAssertTrue(book3 == nil,@"book does not exist");
 	 

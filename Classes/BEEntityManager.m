@@ -3,24 +3,51 @@
 //
 
 #import "BEEntityManager.h"
-#import "BEEntityFetcher.h"
 
+
+#import "BEEntityManagerContext.h"
+
+#pragma mark -
+#pragma mark EntityManager
 
 @implementation BEEntityManager
 
 @synthesize managedObjectContext;
 
-static NSPersistentStoreCoordinator *persistentStoreCoordinator;
+static BEEntityManagerContext *context;
+
+#pragma mark -
+#pragma mark initialize db
+
++ (void) useDb: (NSString *) dbName {
+	
+	context = [[BEEntityManagerContext alloc] initWithDb: dbName];
+	
+}
+
+
+#pragma mark -
+#pragma mark instance init
 
 - (id) init
 {
 	self = [super init];
 	if (self != nil) {
-		NSManagedObjectContext *context = [self managedObjectContext];		
-		self.managedObjectContext = context;
+		self.managedObjectContext = [context managedObjectContext];		
 	}
 	return self;
 }
+
+- (id) initWithNewManagedObjectContext 
+{
+	self = [super init];
+	if (self != nil) {		
+		self.managedObjectContext = [[NSManagedObjectContext alloc] init];
+        managedObjectContext.persistentStoreCoordinator = [context persistentStoreCoordinator];
+	}
+	return self;
+}
+
 
 #pragma mark -
 #pragma mark query
@@ -49,21 +76,30 @@ static NSPersistentStoreCoordinator *persistentStoreCoordinator;
 		sort = DEFAULT_SORT_FIELD;
 	}
     
-    BEEntityFetcher *entityFetcher = [[BEEntityFetcher alloc] initWith: managedObjectContext entityName: entityName sort:sort ascending:asc ];
+	NSFetchRequest *fetchRequest = [[[NSFetchRequest alloc] init] autorelease];
+	
+	fetchRequest.entity = [NSEntityDescription entityForName: entityName inManagedObjectContext: managedObjectContext];
+	
+	NSSortDescriptor *sortDescriptor = [[[NSSortDescriptor alloc] initWithKey: sort ascending: asc] autorelease];
+	[fetchRequest setSortDescriptors: [NSArray arrayWithObject: sortDescriptor]];
+	
+	NSFetchedResultsController *fetchResultsController = [[[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest 
+																	  managedObjectContext:managedObjectContext
+																		sectionNameKeyPath:nil
+																				 cacheName:nil] autorelease];
+	
 	
 	if (predicate != nil) {
-		[entityFetcher.fetchRequest setPredicate:predicate];
+		[fetchRequest setPredicate:predicate];
 	}
 		
 	NSError *error = nil;
-	if(![entityFetcher.fetchResultsController performFetch:&error]) {
+	if(![fetchResultsController performFetch:&error]) {
 		NSLog(@"error: %@",[error userInfo]);
 	}
 	
-	NSArray *entities = [entityFetcher.fetchResultsController fetchedObjects];
+	NSArray *entities = [fetchResultsController fetchedObjects];
     
-    [entityFetcher release];
-	
 	return entities;
 }
 
@@ -154,18 +190,16 @@ static NSPersistentStoreCoordinator *persistentStoreCoordinator;
 - (void)saveContext {
     
     NSError *error = nil;
-	NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
-    if (managedObjectContext != nil) {
-        if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-            /*
-             Replace this implementation with code to handle the error appropriately.
-             
-             abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
-             */
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
-        } 
-    }
+
+	if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
+		/*
+		 Replace this implementation with code to handle the error appropriately.
+		 
+		 abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
+		 */
+		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+		abort();
+	} 
 }    
 
 #pragma mark -
@@ -201,89 +235,6 @@ static NSPersistentStoreCoordinator *persistentStoreCoordinator;
 		NSLog(@"ERROR: %@",[error userInfo]);
 	}
 }
-
-#pragma mark -
-#pragma mark Core Data stack
-
-/**
- Returns the managed object context for the application.
- If the context doesn't already exist, it is created and bound to the persistent store coordinator for the application.
- */
-- (NSManagedObjectContext *) managedObjectContext {
-	
-    if (managedObjectContext != nil) {
-        return managedObjectContext;
-    }
-	
-	if (persistentStoreCoordinator == nil) {
-		NSLog(@"persistence store not initialized");
-		return nil;
-	}
-	
-	self.managedObjectContext = [[NSManagedObjectContext alloc] init];
-	managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator;
-
-    return managedObjectContext;
-}
-
-
-+ (void)createPersistentStoreCoordinator: (NSString *) storeName {
-	
-	NSString *storePath = [DOCUMENTS_FOLDER stringByAppendingPathComponent: storeName];
-    NSURL *storeUrl = [NSURL fileURLWithPath: storePath];
-	
-	NSError *error = nil;	
-	
-	NSManagedObjectModel *managedObjectModel = [[NSManagedObjectModel mergedModelFromBundles:nil] retain];    
-
-    persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:managedObjectModel];
-	[managedObjectModel release];
-	
-	NSPersistentStore *store = [persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeUrl options:nil error:&error];
-
-	
-    if (!store) {
-		
-		NSLog(@"error code: %d",error.code);
-		
-		// incompatible dbs... just replace it
-		if (error.code == 134100) {
-			if([self replaceOldDb: storePath storeUrl: storeUrl psc: persistentStoreCoordinator]) {
-				return;
-			}
-		}
-		
-		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-		abort();
-		
-	}    
-}
-
-+ (BOOL) replaceOldDb: (NSString *) storePath storeUrl: (NSURL *) storeUrl psc: (NSPersistentStoreCoordinator *) persistentStoreCoordinator {
-	
-	NSLog(@"replacing old data store");
-	
-	NSFileManager *nfm = [NSFileManager defaultManager];
-	if ([nfm fileExistsAtPath: storePath]) {
-		NSError *error2 = nil;
-		[nfm removeItemAtPath:storePath error:&error2];
-		if (error2 != nil) {
-			NSLog(@"could not remove old data store: %@",[error2 userInfo]);
-		} else {
-			// try to recover
-			NSError *error = nil;
-			[persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeUrl options:nil error:&error];
-			if (error == nil) {
-				return YES;
-			}
-		}
-		
-	}
-	return NO;
-	
-}
-
-
 
 
 #pragma mark -
