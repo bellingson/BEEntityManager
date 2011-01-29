@@ -1,2 +1,10 @@
-.DS_Store
 build
+.DS_Store
+*.pbxuser
+*.modelv3
+*.perspectivev3
+profile
+project.xcworkspace
+*xcuserdata*
+*.xcuserstate
+*.xcscheme
