@@ -80,8 +80,15 @@ static BEEntityManagerContext *context;
 	
 	fetchRequest.entity = [NSEntityDescription entityForName: entityName inManagedObjectContext: managedObjectContext];
 	
-	NSSortDescriptor *sortDescriptor = [[[NSSortDescriptor alloc] initWithKey: sort ascending: asc] autorelease];
-	[fetchRequest setSortDescriptors: [NSArray arrayWithObject: sortDescriptor]];
+	NSArray *sortItems = [sort componentsSeparatedByString:@","];
+	NSMutableArray *sortDescriptors = [[[NSMutableArray alloc] initWithCapacity: sortItems.count] autorelease];
+	for (NSString *key in sortItems) {
+		NSSortDescriptor *sd = [[NSSortDescriptor alloc] initWithKey: key ascending: asc];
+		[sortDescriptors addObject: sd];					
+		[sd release];
+	}
+	
+	[fetchRequest setSortDescriptors: sortDescriptors];
 	
 	NSFetchedResultsController *fetchResultsController = [[[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest 
 																	  managedObjectContext:managedObjectContext
